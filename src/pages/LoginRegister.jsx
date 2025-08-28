@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaGithub, FaGoogle, FaLinkedin } from 'react-icons/fa';
+import { FaEye, FaFacebookF, FaGithub, FaGoogle, FaLinkedin } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { SiGoogle } from 'react-icons/si';
 
@@ -36,7 +36,7 @@ const LoginRegister = () => {
                             </div>
                             <div className='w-10 h-10 flex justify-center items-center border border-gray-300 rounded-md shadow hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer text-blue-900 text-xl'>
                                 <FaLinkedin />
- 
+
                             </div>
                         </div>
                         {/*email registration*/}
@@ -45,7 +45,15 @@ const LoginRegister = () => {
                         <form className='flex flex-col w-full space-y-5'>
                             <input className='px-4 py-3 outline-none rounded-lg border border-gray-200 shadow focus:ring ring-violet-300' type="text" placeholder='name' />
                             <input className='px-4 py-3 outline-none rounded-lg border border-gray-200 shadow focus:ring ring-violet-300' type="email" placeholder='Email' />
-                            <input className='px-4 py-3 outline-none rounded-lg border border-gray-200 shadow focus:ring ring-violet-300' type="password" placeholder='Password'  />
+                            <div className="relative w-full">
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    className="w-full px-4 py-3 pr-10 outline-none rounded-lg border border-gray-200 shadow focus:ring ring-violet-300"
+                                />
+                                <FaEye className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-700 cursor-pointer" />
+                            </div>
+
                             <button className='px-4 py-3 bg-violet-500 rounded-lg border text-white hover:bg-white hover:text-violet-600 hover:border-violet-600 cursor-pointer  '>SIGN UP</button>
                         </form>
 
